@@ -15,11 +15,11 @@ import java.util.List;
  * Created by Adish on 22/09/17.
  */
 
-public class Booklist extends ArrayAdapter<existingBooks> {
+public class Booklist extends ArrayAdapter<get_User_ph> {
 private Activity context;
-    private List<existingBooks> booksList;
+    private List<get_User_ph> booksList;
 
-    public Booklist (Activity context, List<existingBooks> booksList){
+    public Booklist (Activity context, List<get_User_ph> booksList){
         super(context, R.layout.my_lib,booksList);
                 this.context=context;
                 this.booksList=booksList;
@@ -35,7 +35,7 @@ private Activity context;
         TextView bookTitle = (TextView) listViewItem.findViewById(R.id.bookTitle);
         TextView bookAuthor = (TextView) listViewItem.findViewById(R.id.bookAuthor);
 
-        existingBooks existingBookss = booksList.get(position);
+        get_User_ph existingBookss = booksList.get(position);
         bookTitle.setText(existingBookss.getTitle());
         bookAuthor.setText(existingBookss.getAuthor());
 

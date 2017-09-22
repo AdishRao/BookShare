@@ -18,7 +18,7 @@ import java.util.List;
 public class displayUserBooks extends AppCompatActivity {
 
     ListView listViewBooks;
-    List<existingBooks> existingBookses;
+    List<get_User_ph> existingBookses;
     private FirebaseAuth mAuth;
     FirebaseDatabase databaseViewbooks = FirebaseDatabase.getInstance();
     DatabaseReference myRef = databaseViewbooks.getReference("Books");
@@ -55,8 +55,8 @@ public class displayUserBooks extends AppCompatActivity {
             String uid=ds.child("users").getKey();
             mAuth = FirebaseAuth.getInstance();
             FirebaseUser user = mAuth.getCurrentUser();
-            existingBooks eBooks = new existingBooks();
-            eBooks = ds.getValue(existingBooks.class);
+            get_User_ph eBooks = new get_User_ph();
+            eBooks = ds.getValue(get_User_ph.class);
                 if(user.getUid().equals(uid))
                 existingBookses.add(eBooks);
         }
