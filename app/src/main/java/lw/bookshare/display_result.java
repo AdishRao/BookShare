@@ -11,18 +11,20 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import static lw.bookshare.R.id.bookTitle;
+
 /**
- * Created by Adish on 22/09/17.
+ * Created by User on 22-09-2017.
  */
 
-public class Booklist extends ArrayAdapter<get_User_ph> {
-private Activity context;
-    private List<get_User_ph> booksList;
+public class display_result extends ArrayAdapter<get_User_ph> {
+    private Activity context;
+    private List<get_User_ph> displaybooks;
 
-    public Booklist (Activity context, List<get_User_ph> booksList){
-        super(context, R.layout.my_lib,booksList);
-                this.context=context;
-                this.booksList=booksList;
+    public display_result (Activity context, List<get_User_ph> displaybooks){
+        super(context, R.layout.my_lib,displaybooks);
+        this.context=context;
+        this.displaybooks =displaybooks;
     }
 
     @NonNull
@@ -35,10 +37,12 @@ private Activity context;
         TextView bookTitle = (TextView) listViewItem.findViewById(R.id.bookTitle);
         TextView bookAuthor = (TextView) listViewItem.findViewById(R.id.bookAuthor);
 
-        get_User_ph existingBookss = booksList.get(position);
-        bookTitle.setText(existingBookss.getTitle());
-        bookAuthor.setText(existingBookss.getAuthor());
+        get_User_ph Display1 = displaybooks.get(position);
+        bookTitle.setText(Display1.getUsername());
+        bookAuthor.setText(Display1.getPhone());
 
         return listViewItem;
     }
 }
+
+

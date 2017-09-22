@@ -44,7 +44,7 @@ public class Home_Page extends AppCompatActivity implements View.OnClickListener
         if(view==btn_search)
         {
             finish();
-            startActivity(new Intent(this,edit_Library.class)); //Change this part
+            startActivity(new Intent(this,search_Page.class));
         }
 
         if(view==btn_edit)

@@ -20,9 +20,6 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.HashMap;
 import java.util.Map;
 
-import static android.R.attr.author;
-import static lw.bookshare.R.id.buttonLogout;
-
 public class edit_Library extends AppCompatActivity implements View.OnClickListener {
     Button add_Book;
     Button rmv_Book;
@@ -105,8 +102,8 @@ public class edit_Library extends AppCompatActivity implements View.OnClickListe
     private void checkBooks(DataSnapshot dataSnapshot) {
         for (DataSnapshot ds : dataSnapshot.getChildren()) {
             String bid=ds.getKey();
-            existingBooks eBooks = new existingBooks();
-            eBooks = ds.getValue(existingBooks.class);
+            get_User_ph eBooks = new get_User_ph();
+            eBooks = ds.getValue(get_User_ph.class);
             titlear[i]=eBooks.getTitle(); //Gets Title
             authorar[i]=eBooks.getAuthor(); //Gets Author
             bidar[i]=bid;
