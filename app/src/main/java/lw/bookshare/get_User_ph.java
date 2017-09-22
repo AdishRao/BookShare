@@ -1,31 +1,30 @@
 package lw.bookshare;
 
 /**
- * Created by Adish on 19/09/17.
+ * Created by User on 22-09-2017.
  */
 
 public class get_User_ph {
-
-        String author;
-        String title;
-
-    public get_User_ph(){
+    String username;
+    String phone;
+    public get_User_ph() {
 
     }
 
-    public String getAuthor() {
-        return author;
+    public String getUsername() {
+        return username;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public String getTitle() {
-        return title;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
+

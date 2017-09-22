@@ -1,3 +1,5 @@
+package lw.bookshare;
+
 import android.app.Activity;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -8,9 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.List;
-
-import lw.bookshare.R;
-import lw.bookshare.get_User_ph;
 
 import static lw.bookshare.R.id.bookTitle;
 
@@ -35,15 +34,15 @@ public class display_result extends ArrayAdapter<get_User_ph> {
 
         View listViewItem = inflater.inflate(R.layout.my_lib,null,true);
 
-        TextView b = (TextView) listViewItem.findViewById(bookTitle);
+        TextView bookTitle = (TextView) listViewItem.findViewById(R.id.bookTitle);
         TextView bookAuthor = (TextView) listViewItem.findViewById(R.id.bookAuthor);
 
         get_User_ph Display1 = displaybooks.get(position);
         bookTitle.setText(Display1.getUsername());
-        bookAuthor.setText(Display1.getx());
+        bookAuthor.setText(Display1.getPhone());
 
         return listViewItem;
     }
 }
 
-}
+
